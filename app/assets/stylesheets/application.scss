@@ -14,29 +14,28 @@
  *= require_self
  */
 
-$pink: #ea4c89;
-$pink-invert: #fff;
+$dark-blue: #252A37;
+$white-invert: #fff;
 
-$primary: $pink;
-$primary-invert: $pink-invert;
+
+$primary: $dark-blue;
+$primary-invert: $white-invert;
 $link: $primary;
 $link-hover: darken($primary, 20%);
+$footer-background-color: dark;
+
 
 @import "bulma";
-
-.pr-1{
-    padding-right: 10px;
-    color: #fff;
-}
-
-html, body {
-	min-height: 100vh;
-	background-color: #f4f4f4;
-	position:relative;
-}
+@import "functions";
 
 
 
+/*html, body {
+ min-height: 100vh;
+ position: relative;
+}*/
+ 
+      
 .notification {
 	border-radius: none;
 }
@@ -48,29 +47,60 @@ html, body {
 	display: block !important;
 }
 
+.page-container {
+ min-height: 100vh; /* will cover the 100% of viewport */
+ overflow: hidden;
+ display: block;
+ position: relative;
+ padding-bottom: 100px; /* height of your footer */
+}
+
+.charity-index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+
+  .charity {
+    border-left: 0;
+    border-top: 0;
+    position: relative;
+    min-height: 375px;
+
+    .name {
+      line-height: 1.6rem;
+    }
+  }
+  
+.charity-thumb {
+    position: relative;
+    max-height: 150px;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+      width: 100%;
+      &:hover {
+        opacity: .9;
+      }
+    }
+}
+}
+
 /*= Footer
 --------------------------------------------------------*/
 footer {
-    margin-top: auto;
-    padding: 20px 0px;
-    text-align: center;
-    background-color: #363636;
+ 
+    background-color: #e3e3e3;
     color: whitesmoke;
-    font-weight: 200;
+    font-weight: 50;
     font-size: 1rem;
-    display:block;
-    width: 100%;
-    position:absolute;
+    text-align:center;
+    margin-top: auto;
+    position:fixed;
     bottom:0;
-}
-
-
-.social-media{
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    width: 70%;
-    color: #fff;
-    border-bottom: 1px dotted #fff;
+    width:100%;
 
 }
+
+
+
 

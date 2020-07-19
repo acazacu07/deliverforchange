@@ -35,6 +35,10 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem "activesupport", ">= 5.0.7.2"
+gem "actionview", ">=  5.0.7.2"
+gem "actionpack", ">=  5.0.7.2"
+
 gem "bulma-rails", "~> 0.6.1"
 gem 'devise', '~> 4.3'
 gem 'carrierwave', '~> 1.2', '>= 1.2.1'
@@ -43,6 +47,8 @@ gem "mini_magick"
 gem 'impressionist', '~> 1.6'
 gem 'gravatar_image_tag'
 gem 'acts_as_votable', '~> 0.11.1'
+gem 'rolify', '~>5.2'
+gem 'cancancan', '~>2.1','>=2.1.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

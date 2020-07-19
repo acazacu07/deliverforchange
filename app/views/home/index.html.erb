@@ -1,2 +1,43 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<% provide(:title, "Cakes O'clock") %>
+
+ <main class = "site-content">
+      <%= yield %>
+      
+    <div class = "block">
+      <section class = "hero">
+        <div class = "hero-body">
+          <div class = "container">
+            <h1 class = "title is-center">DeliverForChange</h1>
+            <h2 class = "subtitle">We help you so you can help others. Together we are stronger </h2>
+          </div>
+          
+        </div>
+      </section>
+    </div>
+      
+      <div class ="block">
+        <form class= "form-inline my-2 my-lg-0" action="/search">
+          
+            <label class = "label">Please Select Charity </label>
+            <div class = "field has-addons">
+            <p class = "control">
+            <input type ="text" name="q" class = "input" placeholder="Enter Name"></input>
+            </p>
+             <p class = "control">
+               <button class = "button is-info" type ="submit">Search</a>
+            </p>
+          </div>
+          
+          
+            <label class = "label">Please Select Location</label>
+            <div class = "field has-addons">
+              <p class = "control">
+            <input type ="text" county="q" class = "input" placeholder="Enter Name"></input>
+            <p class = "control">
+               <button class = "button is-info" type ="submit">Search</a>
+            </p>
+          </div>
+
+        </form>
+        
+    </main>

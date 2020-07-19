@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application' %>
   </head>
 
-  <body>
+  <body class ="<%=yield (:body_class)%>">
+    <div id = "page-container">
+      <div id="content-wrap">
     <header>
     <% if flash[:notice] %>
     	<div class="notification is-primary global-notification">
@@ -23,14 +25,15 @@
     <% end %>
     
       <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        
       <div class="navbar-brand">
         <%= link_to root_path, class:"navbar-item" do %>
           <h1 class="title is-5 has-text-white">DeliverForChange</h1>
         <% end  %>
       <div class="navbar-burger burger" data-target="navbar">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
       </div>
     </div>
 
@@ -40,17 +43,34 @@
           <div class="navbar-item">
             <div class="field is-grouped">
               <p class="control">
-                <%= link_to 'About Us', root_path , class:"button is-dark" %>
+                <%= link_to 'What do we do', root_path , class:"button is-dark" %>
               </p>
             </div>
           </div>
+          
+         <div class="navbar-item">
+            <div class="field is-grouped">
+              <p class="control">
+                <%= link_to 'Get in touch', root_path , class:"button is-dark" %>
+              </p>
+            </div>
+          </div>
+          
+        </div>
+        
+        <div class = "navbar-center">
+          <a href = "" class = "nav-item">
+            <figure class = "">
+              <%= link_to image_tag("logosmall.png", alt:"logo"),"/" %>
+            </figure>
+          </a>
         </div>
 
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="field is-grouped">
               <% if user_signed_in? %>
-              <p class="control"> <p button is-dark > Welcome </p>
+              <p class="control"> 
                  <%= link_to  current_user.name, edit_user_registration_path, class:"button is-dark" %>
               </p> 
               <p class="control">
@@ -71,31 +91,22 @@
     </nav> 
     </header>
    
-    <main>
-      <%= yield %>
+   <%= yield(:header) %>
+    <main class="">
+    <%= yield %>
     </main>
-    
- 
-      <footer>
-        <h4 class="footer-h4">Follow us on</h4>
-        <div class="container social-media">
-            <div class="pr-1">
-                <a href="" target="" > 
-                    <%= image_tag("fb.png", alt: "facebook", :class => "img") %>
-                </a>
-            </div>
-            <div class="pr-1">
-                <a href="" target="" > 
-                    <%= image_tag("instagram.png", alt: "instagram", :class => "img") %>
-                </a>
-            </div>
-            <div class="pr-1">
-                <a href="" target=""> 
-                    <%= image_tag("twitter.png", alt: "twitter", :class => "img") %>
-                </a>
-            </div>
+    </div>
+  
+      <footer class = "footer">
+        <div class ="container">
+          <ul class = "level">
+            <li class = "level-item"><a href=""><i class ="fa fa-facebook"></i> Facebook </a></li>
+            <li class = "level-item"><a href=""><i class ="fa fa-instagram"></i> Instagram </a></li>
+             <li class = "level-item"><a href=""><i class ="fa fa-twitter"></i> Twitter </a></li>
+          </ul>
+        
         </div>
-        <p>® 2020 DeliverForChange. All rights are reserved.</p>
     </footer>
+    </div-id>
   </body>
 </html>
