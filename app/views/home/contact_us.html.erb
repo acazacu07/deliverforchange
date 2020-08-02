@@ -1,0 +1,61 @@
+      <section class = "hero">
+        <div class = "hero-body is-centered border">
+            <h1 class = "title has-text-centered">Contact Us</h1>
+        </div>
+      </section>
+         <%= yield %>
+      <main class = "">
+      <div class = "columns is-multiline is-mobile ml4 mt3 border ">
+          <div class = "column is-6 border ">
+              
+              <form id= "contact" name ="contact"  action ="https://formspree.io/x19171544@student.ncirl.ie" method="POST">
+                
+                <div class="field is-medium mt3">
+                  <label class="label is-medium mt2">Subject</label>
+                  <div class="control ">
+                   <input type= "text" name ="subject" placeholder="Message subject.." class ="subject input is-medium"/>
+                  </div>
+                </div>
+                
+
+
+                    <div class="field is-medium">
+                      <label class="label is-medium mt3">E-mail</label>
+                      <div class="control">
+                        <input type= "email" name ="email" placeholder="Your email.." class ="email input is-medium"/>
+                      </div>
+                    </div>
+                                    
+                
+               <div class="field is-medium">
+                  <label class="label is-medium mt3">Message</label>
+                  <div class="control">
+                     <textarea name ="message"  placeholder="Write something.." style="height:150px" class ="message input is-medium"></textarea>
+                  </div>
+                </div>
+             
+                <div class="status"></div>   
+ 
+            <div class="field is-grouped pt5">
+                  <div class="control">
+                    <input type="submit" value="Send" class= "submit button is-medium is-link">
+                  </div>
+                  <div class="control">
+                    <button class="button is-medium is-link is-light" >Cancel</button>
+                  </div>
+                </div>
+             </form>   
+          </div>
+
+         <div class ="column is-4  is-pulled-right mt3 ml4 ">
+           <div class = "field">
+               <p class = "subtitle has-text-centered ">You can find us at 123 North St. East Wall Dublin</p>
+                <div class = "map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.0993937265157!2d-6.239833584023012!3d53.35937608143615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e5f2131663f%3A0x554992a3b3649223!2s3%20E%20Wall%20Rd%2C%20North%20Dock%2C%20Dublin!5e0!3m2!1sen!2sie!4v1575652817534!5m2!1sen!2sie" class= "iframe ml2"  allowfullscreen="">
+             </div>
+           
+             </div>
+          </div>
+      </div>
+      
+    </main>
