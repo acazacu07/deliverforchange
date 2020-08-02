@@ -1,6 +1,6 @@
-.iframe{
-  width: 425px;
-  height: 350px; }
+
+
+
 
 html,
 body {
@@ -10,11 +10,18 @@ body {
   display: block;
 }
 
+
+.iframe{
+  width: 425px;
+  height: 350px; }
+
 .map{ width: 40%; /* Set the width of the sidebar */
   float:left;
   padding: 20px; /* Some padding */
   margin-top: 10px;
   }
+  
+  
   
   @media screen and (max-width: 1023px) {
 

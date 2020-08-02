@@ -5,15 +5,16 @@
       </section>
          <%= yield %>
       <main class = "">
-      <div class = "columns is-multiline is-mobile ml4 mt3 border ">
+      <div class = "columns is-multiline is-mobile ml4 mt3  ">
           <div class = "column is-6 border ">
               
               <form id= "contact" name ="contact"  action ="https://formspree.io/x19171544@student.ncirl.ie" method="POST">
                 
-                <div class="field is-medium mt3">
-                  <label class="label is-medium mt2">Subject</label>
+                
+           <div class="field is-medium">
+                      <label class="label is-medium mt3">Subject</label>
                   <div class="control ">
-                   <input type= "text" name ="subject" placeholder="Message subject.." class ="subject input is-medium"/>
+                   <input type= "text" name ="subject" placeholder="Message subject.." class ="subject input is-medium " id = "subject"/>
                   </div>
                 </div>
                 
@@ -22,7 +23,7 @@
                     <div class="field is-medium">
                       <label class="label is-medium mt3">E-mail</label>
                       <div class="control">
-                        <input type= "email" name ="email" placeholder="Your email.." class ="email input is-medium"/>
+                        <input type= "email" name ="email" placeholder="Your email.." class ="email input is-medium" id ="email"/>
                       </div>
                     </div>
                                     
@@ -30,7 +31,7 @@
                <div class="field is-medium">
                   <label class="label is-medium mt3">Message</label>
                   <div class="control">
-                     <textarea name ="message"  placeholder="Write something.." style="height:150px" class ="message input is-medium"></textarea>
+                     <textarea name ="message"  placeholder="Write something.."  class ="message input is-medium" id = "message"></textarea>
                   </div>
                 </div>
              
@@ -38,7 +39,7 @@
  
             <div class="field is-grouped pt5">
                   <div class="control">
-                    <input type="submit" value="Send" class= "submit button is-medium is-link">
+                    <input type="submit" value="Send" class= "submit button is-medium is-link mb2" id = "submit">
                   </div>
                   <div class="control">
                     <button class="button is-medium is-link is-light" >Cancel</button>
