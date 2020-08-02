@@ -1,0 +1,84 @@
+/*
+
+ *= require_tree .
+ *= require simple_calendar
+ *=require trix
+ */
+
+$dark-blue: #252A37;
+$white-invert: #fff;
+
+
+$primary: $dark-blue;
+$primary-invert: $white-invert;
+$link: $primary;
+$link-hover: darken($primary, 20%);
+$footer-background-color: dark;
+
+
+@import "bulma";
+@import "functions";
+@import "simple_calendar";
+
+html, body {
+   min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+    
+.notification {
+	border-radius: none;
+}
+.notification:not(:last-child) {
+	margin-bottom: 0;
+}
+
+.visible {
+	display: block !important;
+}
+
+
+
+.charity-index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+
+  .charity {
+    border-left: 0;
+    border-top: 0;
+    position: relative;
+    min-height: 375px;
+
+    .name {
+      line-height: 1.6rem;
+    }
+  }
+  
+.charity-thumb {
+    position: relative;
+    max-height: 150px;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+      width: 100%;
+      &:hover {
+        opacity: .9;
+      }
+    }
+  }
+}
+
+
+
+/*= Footer
+--------------------------------------------------------*/
+footer {
+   background-color: #e3e3e3;
+    margin-top: auto;
+}
+
+
+
+

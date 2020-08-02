@@ -1,0 +1,46 @@
+  <% content_for :body_class, 'bg-light' %>
+  
+  <section class="section charity-show">
+<div class="columns">
+  <div class="column is-6 ">
+
+      <div class="feature-image mt1">
+        <%= image_tag(@charity.image_url(:default)) %>
+      </div>
+ </div>   
+    
+ <div class = "column "> 
+    <div class="content pa1  bg-white border-radius-3">
+     
+     <h3 class="subtitle is-4">Description</h3>
+      <%= @charity.description %>
+
+
+     <h3 class="subtitle is-4 pt1 ">Charity Details</h3>
+
+    <table class="table is-narrow">
+        <tr>
+          <td class="has-text-weight-bold">Address:</td>
+          <td><%= @charity.address %></td>
+        </tr>
+       
+       <tr>
+          <td class="has-text-weight-bold">County:</td>
+          <td><%= @charity.county %></td>
+        </tr>
+        
+       <tr>
+          <td class="has-text-weight-bold">Phone Number:</td>
+          <td><%= @charity.phonenumber %></td>
+        </tr>   
+   </table>
+   </div>
+  </div> 
+  
+ </div>
+
+ <% if has_role?(:admin) %>
+    <%= link_to 'Edit', edit_charity_path(@charity), class: 'button' %>
+    <%= link_to 'Cancel', charities_path, class:'button is-light' %>
+ <% end %>
+</section>

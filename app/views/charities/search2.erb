@@ -1,0 +1,38 @@
+<div class="charity-index-grid pt4">
+   <% @charities.each do |charity| %>
+  
+  
+  <div class="charity border-light">
+      <div class="charity-thumb">
+      <%= link_to image_tag(charity.image_url(:thumb)), charity %>
+    </div>
+
+
+ <div class="pa3 ">
+   
+      <p class="fw7 f4 title"><%= link_to charity.name, charity %></p>
+      <p class="has-text-gray fg pt1 ">Address: <%= charity.address %></p>
+      <p class="has-text-gray fg pt1">County: <%= charity.county %></p>
+      <p class="has-text-gray fg pt1">Phone: number <%= charity.phonenumber %></p>
+      <p class="has-text-gray fg pt1 pb1">Description: <%= charity.description %></p>
+      
+  </div>
+  <div class = "field">
+ <% if has_role?(:admin) %>
+      <%= link_to 'Edit', edit_charity_path(charity), class: "button is-small" %>
+      <%= link_to 'Delete', charity, method: :delete, data: { confirm: "Are you sure ?" }, class: "button is-small" %>
+<% end %>
+   </div>
+    
+  </div>
+  <% end %>
+ </div>
+
+<%if has_role?(:admin)%>
+ <br>
+ <%= link_to 'New Charity', new_charity_path, class: "button is-warning" %>
+ </br>
+ <% end %> 
+
+
+ 

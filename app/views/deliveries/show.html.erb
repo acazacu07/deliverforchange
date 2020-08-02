@@ -1,0 +1,42 @@
+        <% content_for :header do %>
+        <section class="hero is-warning">
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title">  Congrats ! You have successfully arranged a donation collection  </h1>
+              <h2 class="subtitle pa1">Please find below the details </h2>
+            </div>
+          </div>
+        </section>
+        <% end %>
+        
+        
+  <section class="columns ">
+    <div class="column is-4 is-narrow   mh7">
+      <div class="content  bg-white border-radius-3 ">
+        <h3 class="subtitle is-4 pa3 ">Pick Up Details</h3>
+        
+        <table class="table  is-fullwidth ">
+          <tbody>
+          <tr>
+            <td class="has-text-weight-bold">Charity:</td>
+            <td><%= @delivery.charity.name %></td>
+          </tr>
+          
+          <tr>
+            <td class="has-text-weight-bold">Time:</td>
+            <td><%= readable_time( @delivery.start_time) %></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+   
+    <div class = "column is-vcentered" >
+         <% if has_role?(:admin) %>
+            <%= link_to 'Edit', edit_delivery_path(@delivery), class: 'button' %>
+            <%= link_to 'Delete', deliveries_path, class:'button is-light' %>
+         <% end %>
+    </div>
+ </div>
+        
+    
+  </section>

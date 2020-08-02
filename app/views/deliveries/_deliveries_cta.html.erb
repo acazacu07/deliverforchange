@@ -1,0 +1,28 @@
+<% content_for :header do %>
+
+<section class="hero is-warning">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+           It looks like you havent organized any pick-ups
+  </h1>
+    </div>
+  </div>
+</section>
+<% end %>
+
+<div class="columns"
+ <div class="column is-8">
+    
+  <div class="feature-image">
+ <%= image_tag "schedule.svg", alt:"schedule", witdth:300, class:"mb-4"%>
+ </div>
+ 
+ <div class="column is-3 is-offset-1">
+  <div class="bg-white pa4 border-radius-3">
+    <%= link_to 'Organize pick-up', new_delivery_path, class: 'button is-warning organize-delivery' %>
+  </div>
+ </div> 
+ 
+ </div>
+ </div>

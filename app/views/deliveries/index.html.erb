@@ -1,0 +1,9 @@
+<div class = "container">
+
+<% unless current_user.deliveries.any? %>
+   <%= render "deliveries_cta" %>
+ 
+<% else %>
+  <%= render "deliveries_landing", deliveries: @deliveries %>
+<%end%>
+</div>

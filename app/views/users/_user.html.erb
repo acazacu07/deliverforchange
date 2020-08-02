@@ -1,0 +1,16 @@
+<div class=" columns align-items-center mh7 mb5 border">
+  <div class="column is-4 border">
+    <div><h3 class="text"><%= user.name %></h3> <%= user.email %> <% if current_user %>(You)<% end %></div>
+    <p>Joined on <%= readable_time(user.created_at) %></p>
+  </div>
+  <%= link_to 'Delete User', users_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "button is-warning mt4" if has_role?(:admin) %>
+</div>
+
+<% if user.deliveries.any? %>
+  <div class="block pl2   border mh7 mb5">
+    <p class="has-text-weight-semibold pt1 ">Upcoming deliveries</p>
+    <% user.deliveries.each do |delivery| %>
+        <%= link_to link_to 'Delivery', delivery_path(delivery), class: "button is-warning" %>
+    <% end %>
+  </div>
+<% end %>

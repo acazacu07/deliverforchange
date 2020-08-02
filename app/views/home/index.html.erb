@@ -1,0 +1,68 @@
+<% provide(:title, "DeliverForChange") %>
+    
+    <main class = "site-content" >
+        <%= yield %>
+
+
+      <section class = "hero">
+        <div class = "hero-body">
+          <div class = columns>
+          <div class = "column is-6 ">
+            <h1 class = "title is-center">DeliverForChange</h1>
+            <h2 class = "subtitle">We help you so you can help others. Together we are stronger </h2>
+          </div>
+          
+                  
+          <div class = "column ml6  is-pulled-right">
+            <% user_signed_in? %>
+            <%= link_to "Schedule a donation collection", new_delivery_path, class:"button is-large  is-rounded is-focused" %>
+          </div>
+         </div>  
+        </div>
+      </section>
+    
+
+      
+      <div class ="columns border-top mh3 mv4">
+        <div class="column is-one-quarter pt4 ml4 ">
+          
+        
+      <div class ="field mt5" > 
+        <form  action="/search" >
+            <label class = "label">Please Search for Charity </label>
+            <div class = "field has-addons pb5 ">
+            <p class = "control ">
+            <input type ="text" name="q" class = "input is-medium" placeholder="Enter Name"></input>
+            </p>
+             <p class = "control">
+               <button class = "button is-dark is-medium" type ="submit">Search</a>
+            </p>
+          </div>
+        </form> 
+      </div>
+          
+        <div class ="field mt4  ">
+          <form  action="/search2">
+            <label class = "label">Please Search for County </label>
+            <div class = "field has-addons pb4">
+              <p class = "control">
+            <input type ="text" name="x" class = "input is-medium" placeholder="Enter Name"></input>
+            <p class = "control">
+               <button class = "button is-dark is-medium" type ="submit">Search</a>
+            </p>
+          </div>
+           </form>
+         </div>
+       </div>
+       
+       
+  
+        <div class="column is-9 pb2 is=narrow  ">
+            <div class="is-pulled-right">
+              <%= image_tag("homepage.png", alt: "homepage") %>
+           </div>
+        </div>
+      
+      </div>
+
+    </main>

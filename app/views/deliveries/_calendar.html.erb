@@ -1,0 +1,9 @@
+<%= month_calendar events:deliveries   do |date,deliveries| %>
+ <%= date %>
+ 
+ <% deliveries.each do |delivery|%>
+  <div>
+   <%= link_to 'Your Pick Up Service', delivery_path(delivery), class:"button is-small is-focused "%>    
+  </div>
+ <%end%>
+<%end%>
