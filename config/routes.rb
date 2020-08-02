@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   
   get 'search', to: "charities#search"
   get 'search2', to: "charities#search2"
+  get 'about_us#search2', to: "charities#search2"
  
  get '/contact_us' =>'home#contact_us'
  get '/about_us' =>'home#about_us'

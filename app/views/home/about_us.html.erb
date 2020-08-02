@@ -1,9 +1,32 @@
 <div class="columns is-vcentered">
-  <div class="column is-8">
-    <p class="bd-notification is-primary">First column</p>
+  <div class="column is-5 ml3">
+    <%= image_tag("gifts.png", alt: "gifts") %>
   </div>
   <div class="column">
-    <p class="bd-notification is-primary">Second column with more content. This is so you can see the vertical alignment.</p>
+    <div class="content">
+    <h1 class="title is-3 is-spaced">Schedule a Charity Donation Pick Up</h1>
+    <h2 class="subtitle is-4"> Did you ever want to make a donation but other things jut got in the way ? We get you and we are here to help! </h2>
+  
+  <p class = "has-text-justified mh3">DeliverforChange is a delivery company that organizes charity donation pick-up services all over Ireland. 
+  We take this responsibility very seriously since we know how important your charitable donations are for charities but most important for our community.<br>
+  <br>If you wish to arrange a pick-up service please enter your county below to see the charities we work with. 
+  Once you have decided what charity you wish to donate to please login to organize pick-up. </p>
+  
+  <form  action="/search2">
+  <div class="field has-addons mh3">
+  <div class="control">
+    <input class="input" name="x" type="text" placeholder="Find a charityy">
+  </div>
+  <div class="control">
+   <button class = "button is-dark " type ="submit">Search</a>
+  </div>
+</div>
+ </form>  
+  
+  <p class ="mt3" >Thank you for choosing us . Please use the contact us form for any queries. </p>
+  </p>
+  </div>
+  
   </div>
 </div
   
