@@ -19,7 +19,7 @@
     	</div>
    	<% end %>
     <% if flash[:alert] %>
-    <div class="notification is-danger global-notification">
+    <div class="notification is-warning global-notification">
       <p class="alert"><%= alert %></p>
     </div>
     <% end %>
@@ -30,10 +30,9 @@
         <%= link_to root_path, class:"navbar-item" do %>
           <h1 class="title is-5 has-text-white">DeliverForChange</h1>
         <% end  %>
-      <div class="navbar-burger burger" data-target="navbar">
-        <span>1</span>
-        <span>2</span>
-        <span>3</span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
       </div>
     </div>
 
@@ -44,10 +43,10 @@
           <div class="navbar-item">
             <div class="field is-grouped">
               <p class="control">
-                <%= link_to 'What do we do',about_us_path , class:"button is-dark" %>
+                <%= link_to 'What do we do',about_us_path , class:"navbar-item button is-dark" %>
               </p>
               <p class="control">
-                <%= link_to 'Get in touch', contact_us_path , class:"button is-dark" %>
+                <%= link_to 'Get in touch', contact_us_path , class:"navbar-item button is-dark" %>
               </p>
             </div>
           </div>
@@ -68,7 +67,7 @@
             <div class="field is-grouped">
               <% if has_role?(:admin) %>
               <p class="control">
-              <%= link_to 'Users', users_path , class:"button is-dark"%>
+              <%= link_to 'Users', users_path , class:"navbar-item button is-dark"%>
               </p>
              <%end%>
               <% if user_signed_in? %>
@@ -83,9 +82,9 @@
               </div>
               <% else %>
               <p class="control">
-                 <%= link_to "Sign In", new_user_session_path, class:"button is-dark" %> </p>
+                 <%= link_to "Sign In", new_user_session_path, class:" navbar-item button is-dark" %> </p>
               <p class="control">
-                <%= link_to "Sign up", new_user_registration_path, class:"button is-dark"%> </p>
+                <%= link_to "Sign up", new_user_registration_path, class:"navbar-item button is-dark"%> </p>
               <% end %>
              
             </div>
