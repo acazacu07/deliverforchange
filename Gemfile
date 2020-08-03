@@ -63,8 +63,8 @@ gem 'cancancan', '~>2.1','>=2.1.3'
 gem 'simple_calendar', '~> 2.3'
 gem 'trix', '~> 0.9.9'
 gem 'sidekiq', '~> 5.1', '>= 5.1.3'
-gem 'webpacker',  '4.2.2'
-gem 'bootsnap',   '1.4.6', require: false
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
