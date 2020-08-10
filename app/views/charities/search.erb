@@ -1,4 +1,17 @@
 <div class="charity-index-grid pt4">
+   <% if @charities.blank? %> 
+   
+   
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title"> Oups No records found </h1>
+      <h2 class="subtitle">Please try to search again with a valid charity name or keywords</h2>
+    </div>
+  </div>
+
+  
+   <% else%> 
+   
    <% @charities.each do |charity| %>
   
   
@@ -27,7 +40,7 @@
   </div>
   <% end %>
  </div>
-
+ <% end %>
 <%if has_role?(:admin)%>
  <br>
  <%= link_to 'New Charity', new_charity_path, class: "button is-warning" %>

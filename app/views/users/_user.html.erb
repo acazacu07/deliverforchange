@@ -4,7 +4,7 @@
     <p>Joined on <%= readable_time(user.created_at) %></p>
   </div>
  
-  <%=link_to "Delete", users_path, method: :delete, data: { confirm: "Really delete this user?" }, class: "button is-warning mt4" if has_role?(:admin)  %>
+  <!--<%=link_to "Delete", @user, method: :delete, data: { confirm: "Really delete this user?" }, class: "button is-warning mt4" if has_role?(:admin)  %>-->
 </div>
 
 

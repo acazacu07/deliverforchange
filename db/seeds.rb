@@ -9,6 +9,7 @@
 user = User.new(
   id: 1,
   name: "Admin User",
+  address: "Dublin",
   email: "admin@deliverforchange.ie",
   password: "password",
   password_confirmation: "password"

@@ -17,7 +17,7 @@ class DeliveriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create delivery" do
     assert_difference('Delivery.count') do
-      post deliveries_url, params: { delivery: { date: @delivery.date, time: @delivery.time, user_id: @delivery.user_id } }
+      post deliveries_url, params: { delivery: { start_time: @delivery.start_time, user_id: @delivery.user_id, charity_id: @delivery.charity_id  } }
     end
 
     assert_redirected_to delivery_url(Delivery.last)
@@ -34,7 +34,7 @@ class DeliveriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update delivery" do
-    patch delivery_url(@delivery), params: { delivery: { date: @delivery.date, time: @delivery.time, user_id: @delivery.user_id } }
+    patch delivery_url(@delivery), params: { delivery: { start_time: @delivery.start_time, user_id: @delivery.user_id, charity_id: @delivery.charity_id } }
     assert_redirected_to delivery_url(@delivery)
   end
 

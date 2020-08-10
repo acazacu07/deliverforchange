@@ -1,5 +1,5 @@
 class DeliveriesController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!
   before_action :set_delivery, only: [:show, :edit, :update, :destroy]
   before_action :must_be_admin , only: [ :edit, :update, :destroy]
   

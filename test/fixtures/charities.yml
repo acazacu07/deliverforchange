@@ -3,13 +3,13 @@
 one:
   name: MyString
   address: MyString
-  eircode: MyString
+  county: MyString
   phonenumber: MyString
   description: MyText
 
 two:
   name: MyString
   address: MyString
-  eircode: MyString
+  county: MyString
   phonenumber: MyString
   description: MyText

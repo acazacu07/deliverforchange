@@ -1,5 +1,4 @@
 require 'test_helper'
-
 class CharitiesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @charity = charities(:one)
@@ -17,7 +16,7 @@ class CharitiesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create charity" do
     assert_difference('Charity.count') do
-      post charities_url, params: { charity: { address: @charity.address, description: @charity.description, eircode: @charity.eircode, name: @charity.name, phonenumber: @charity.phonenumber } }
+      post charities_url, params: { charity: { address: @charity.address, description: @charity.description, county: @charity.county, name: @charity.name, phonenumber: @charity.phonenumber } }
     end
 
     assert_redirected_to charity_url(Charity.last)
@@ -34,7 +33,7 @@ class CharitiesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update charity" do
-    patch charity_url(@charity), params: { charity: { address: @charity.address, description: @charity.description, eircode: @charity.eircode, name: @charity.name, phonenumber: @charity.phonenumber } }
+    patch charity_url(@charity), params: { charity: { address: @charity.address, description: @charity.description, county: @charity.county, name: @charity.name, phonenumber: @charity.phonenumber } }
     assert_redirected_to charity_url(@charity)
   end
 

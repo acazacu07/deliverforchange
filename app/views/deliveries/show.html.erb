@@ -33,7 +33,7 @@
     <div class = "column is-vcentered" >
          <% if has_role?(:admin) %>
             <%= link_to 'Edit', edit_delivery_path(@delivery), class: 'button' %>
-            <%= link_to 'Delete', deliveries_path, class:'button is-light' %>
+            <%= link_to 'Delete', @delivery, method: :delete, data: { confirm: "Are you sure ?" }, class:'button is-light' %>
          <% end %>
     </div>
  </div>

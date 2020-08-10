@@ -2,6 +2,7 @@
 
 console.log('it works'); /*checked to see js is inserted correctly*/
 
+document.addEventListener("turbolinks:load", function() {
   function getForm() {
     return document.getElementByClassName("contact");
   }
@@ -40,6 +41,7 @@ $(document).ready(  function() {  /*ready() method is used to make a function av
    }
 }) 
 })
+});
 
 
 

@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+
   after_action :assign_role, only:[:create]
+  
+  protected
+
   
   def assign_role
       @number_of_users = User.all.count
@@ -9,5 +13,6 @@ class ApplicationController < ActionController::Base
       end
   end
   
-   
+
+  
 end
