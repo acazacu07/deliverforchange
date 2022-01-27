@@ -63,7 +63,7 @@ gem 'rolify', '~>5.2'
 gem 'cancancan', '~>2.1','>=2.1.3'
 gem 'simple_calendar', '~> 2.3'
 gem 'trix', '~> 0.9.9'
-gem 'sidekiq', '~> 5.1', '>= 5.1.3'
+gem 'sidekiq', '~> 6.4'
 
 
 
